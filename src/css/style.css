@@ -1,0 +1,259 @@
+@import url("https://fonts.cdnfonts.com/css/satoshi");
+@import url(https://db.onlinewebfonts.com/c/f1fcc5aed1e20fc0cdb9f8a7573625bd?family=Integral+CF+Regular);
+
+:root {
+  --primary-color: #000000;
+  --search-color: #f0f0f0;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  text-decoration: none;
+  transition: 0.2s linear;
+  color: white;
+}
+
+html {
+  font-size: 62.5%;
+  scroll-behavior: smooth;
+  overflow-x: hidden;
+  scroll-padding-top: 6rem;
+}
+
+.promo {
+  background-color: var(--primary-color);
+  color: white;
+  background-color: black;
+  padding: 10px;
+  text-align: center;
+  width: 100%;
+  font-family: "Satoshi";
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 18.9px;
+  position: relative;
+}
+
+.promo .sign-up {
+  font-family: "Satoshi", sans-serif;
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 18.9px;
+  text-decoration: underline;
+  color: white;
+}
+
+.promo .close-btn {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  background: none;
+  border: none;
+  font-size: 20px;
+  color: white;
+  cursor: pointer;
+}
+
+header {
+  position: fixed;
+  left: 0;
+  right: 0;
+  color: var(--primary-color);
+  padding: 2rem 9%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  z-index: 1000;
+}
+
+header p {
+  font-family: "Integral CF";
+  font-size: 32px;
+  font-weight: 700;
+  line-height: 38.4px;
+  margin-right: 20px;
+  color: var(--primary-color);
+}
+
+header .logo {
+  font-size: 3rem;
+  color: black;
+  font-weight: bolder;
+}
+
+header .navbar {
+  display: flex;
+  align-items: center;
+}
+
+header .navbar ul {
+  display: flex;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  font-family: "Satoshi";
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 21.6px;
+  gap: 20px;
+}
+
+header .navbar ul li {
+  margin: 0 1.5rem;
+}
+
+header .navbar ul li a {
+  font-size: 2rem;
+  padding: 0.5rem;
+  color: var(--primary-color);
+}
+
+.navbar .dropdown {
+  position: relative;
+}
+
+.navbar .dropdown-menu {
+  display: none;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  background-color: white;
+  border: 1px solid #ccc;
+  box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.1);
+  list-style: none;
+  padding: 10px 0;
+  margin: 0;
+}
+
+.navbar .dropdown-menu li {
+  padding: 5px 20px;
+}
+
+.navbar .dropdown-menu li a {
+  color: var(--primary-color);
+  display: block;
+  padding: 10px;
+}
+
+.navbar .dropdown-menu li a:hover {
+  background-color: #f0f0f0;
+}
+
+.navbar .dropdown:hover .dropdown-menu {
+  display: block;
+}
+
+header .icons a {
+  font-size: 2.5rem;
+  margin-left: 1.5rem;
+  color: var(--primary-color);
+}
+
+header #toggler {
+  display: none;
+}
+
+header .fa-bars {
+  font-size: 3rem;
+  color: black;
+  border-radius: 0.5rem;
+  padding: 0.5rem 1.5rem;
+  cursor: pointer;
+  display: none;
+}
+.search-bar {
+  display: flex;
+  align-items: center;
+  margin: 20px;
+}
+
+.search-bar input[type="text"] {
+  padding: 12px 200px;
+  border: 1px solid #ccc;
+  border-radius: 5px 0 0 5px;
+  outline: none;
+  border-radius: 62px;
+  font: 16px;
+  flex: 1;
+  text-align: left;
+  background-color: var(--search-color);
+}
+
+.search-bar button {
+  position: absolute;
+  margin-left: 10px;
+  font-size: 20px;
+  border: none;
+  cursor: pointer;
+  color: black;
+  background-color: transparent;
+}
+.fa-magnifying-glass {
+  color: #00000066;
+}
+.icons {
+  display: flex;
+  align-items: center;
+  margin-left: 20px;
+}
+
+.icons a {
+  margin-left: 15px;
+  color: var(--primary-color);
+  font-size: 18px;
+  transition: color 0.3s;
+}
+
+.icons a:hover {
+  color: var(--search-color);
+}
+
+/* media queries */
+@media (max-width: 991px) {
+  html {
+    font-size: 55%;
+  }
+  header {
+    font-size: 10px;
+    padding: 2rem;
+  }
+}
+
+@media (max-width: 768px) {
+  header .fa-bars {
+    display: block;
+  }
+
+  header .navbar {
+    display: none; /* Ocultar o menu horizontal */
+    flex-direction: column;
+    position: absolute;
+    top: 100%; /* Colocar o menu abaixo do botão de toggler */
+    left: 0;
+    right: 0;
+    background-color: #888;
+    border-top: 0.1rem solid black;
+    z-index: 999;
+  }
+
+  header #toggler:checked ~ .navbar {
+    display: flex; /* Mostrar o menu verticalmente quando o checkbox estiver marcado */
+  }
+
+  header .navbar ul {
+    display: flex; /* Mostrar itens do menu verticalmente */
+    flex-direction: column;
+    margin: 0;
+    padding: 0;
+  }
+
+  header .navbar ul li {
+    margin: 1.5rem 0;
+  }
+
+  header .navbar ul li a {
+    padding: 1.5;
+  }
+}
