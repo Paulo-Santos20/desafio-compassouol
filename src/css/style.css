@@ -50,12 +50,13 @@
 .promo .close-btn {
   position: absolute;
   top: 10px;
-  right: 10px;
+  right: 50px;
   background: none;
   border: none;
   font-size: 20px;
   color: white;
   cursor: pointer;
+  margin-right: 105px;
 }
 
 header {
@@ -65,7 +66,7 @@ header {
   color: var(--primary-color);
   display: flex;
   align-items: center;
-  justify-content: center;
+  justify-content: space-evenly;
   margin: 10px 0;
 }
 
@@ -74,7 +75,6 @@ header p {
   font-size: 32px;
   font-weight: 700;
   line-height: 38.4px;
-  margin-right: 20px;
   color: var(--primary-color);
 }
 
@@ -283,11 +283,18 @@ header .fa-bars {
   height: 663px;
   background-color: #f2f0f1;
   padding: 0 50px;
+  font-family: "Satoshi";
 }
 .banner-content {
-  width: 50%;
   flex: 1;
-  padding: 20px;
+}
+
+.banner-content h1 {
+  font-family: "Integral CF";
+  font-size: 64px;
+  font-weight: 700;
+  line-height: 64px;
+  width: 80%;
 }
 
 .banner-content p {
@@ -306,13 +313,12 @@ header .fa-bars {
   height: 52px;
   top: 507px;
   left: 100px;
-  padding: 16px 54px 16px 54px;
+  padding: 16px 54px;
   gap: 12px;
   border-radius: 62px;
   opacity: 0px;
   background-color: var(--primary-color);
   color: white;
-  font-family: "Satoshi";
   font-size: 16px;
   font-weight: 500;
   line-height: 21.6px;
@@ -363,21 +369,48 @@ hr {
   flex: 1;
   height: 100%;
   overflow: hidden;
+  position: relative;
 }
 
 .banner-image img {
-  width: 100%;
-  height: 100%;
+  max-width: 75%;
+  height: auto;
   object-fit: cover;
+  display: block;
+  margin: 0 auto;
+  position: relative;
+  top: 4%;
 }
 
-h1 {
-  font-family: "Integral CF";
-  font-size: 64px;
-  font-weight: 700;
-  line-height: 64px;
-  text-align: left;
-  width: 80%;
+.banner-image svg {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.banner-image svg:first-child {
+  left: 0;
+}
+.banner-image svg:last-child {
+  right: 0px;
+  top: 30%;
+}
+@media (max-width: 1440px) {
+  .banner-image img {
+    width: 100%;
+    height: 100%;
+  }
+}
+
+
+@media (max-width: 1024px) {
+  .banner-content h1 {   
+    width: 100%;
+    font-size:50px ;
+  } 
+  
+  
+ 
 }
 
 @media (max-width: 768px) {
@@ -427,10 +460,8 @@ h1 {
     grid-template-rows: auto auto;
     gap: 10px;
     padding-top: 20px;
-    justify-content: center;    
+    justify-content: center;
   }
-
- 
 
   .info-box:nth-child(1) {
     grid-column: 1 / 2;
@@ -458,22 +489,20 @@ h1 {
     font-size: 24px;
     line-height: 32.4px;
   }
-  
+
   .info-box p {
-    font-size: 12px;  
-  }  
+    font-size: 12px;
+  }
 }
 /*----------------------------- Store Logo ---------------------------------------*/
 
 .store {
-  width: 100%;
+  max-width: 100%;
   height: 122px;
-  top: 797px;
-  opacity: 0px;
   display: flex;
   justify-content: space-evenly;
+  flex-wrap: wrap;
   align-items: center;
-  gap: 20px;
   background-color: var(--primary-color);
   color: white;
 }
@@ -482,6 +511,15 @@ h1 {
   display: flex;
   align-items: center;
 }
+
+@media (max-width: 768px) {
+  .store svg {
+    width: 100px;
+    height: auto;
+    display: inline-block;
+  }
+}
+
 /*----------------------------- Arrivals ---------------------------------------*/
 
 .new-arrivals {
@@ -628,6 +666,12 @@ h1 {
 }
 
 /* Responsive adjustments */
+@media (min-width: 1024px) {
+  .dress-item, .dress-item2 {
+    width: 100%;
+    
+  }
+}
 @media (max-width: 768px) {
   .dress-container {
     flex-direction: column;
@@ -765,7 +809,7 @@ h1 {
 
 .newsletter-container {
   display: flex;
-  width: 80%;
+  width: 100%;
   background-color: #fff;
   border-radius: 8px;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
@@ -811,6 +855,9 @@ h1 {
 }
 .right-content button:hover {
   background-color: #218838;
+}
+
+@media (min-width: 768px) {
 }
 
 /*----------------------------- Footer ---------------------------------------*/
