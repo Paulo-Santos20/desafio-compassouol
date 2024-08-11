@@ -325,7 +325,7 @@ header .fa-bars {
   padding-top: 20px;
   text-align: center;
   justify-content: center;
-  gap: 20px; 
+  gap: 20px;
 }
 
 .info-box {
@@ -342,7 +342,6 @@ header .fa-bars {
   line-height: 54px;
   text-align: left;
   color: var(--primary-color);
-  
 }
 
 .info-box p {
@@ -355,9 +354,8 @@ header .fa-bars {
   margin-top: 5px;
 }
 
-
 hr {
-  border-top: 1px #0000001A; /* Cor e estilo da linha */
+  border-top: 1px #0000001a; /* Cor e estilo da linha */
   width: 1px;
 }
 
@@ -383,7 +381,6 @@ h1 {
 }
 
 @media (max-width: 768px) {
- 
   .banner-content {
     width: 100%;
     padding: 0;
@@ -428,31 +425,43 @@ h1 {
     display: grid;
     grid-template-columns: 1fr 1fr;
     grid-template-rows: auto auto;
+    gap: 10px;
     padding-top: 20px;
-    justify-content: space-between;
+    justify-content: center;    
+  }
+
+ 
+
+  .info-box:nth-child(1) {
+    grid-column: 1 / 2;
+    justify-self: center;
+    text-align: center;
+  }
+
+  .info-box:nth-child(2) {
+    grid-column: 2 / 3;
+    justify-self: center;
+    text-align: center;
+  }
+
+  .info-box:nth-child(3) {
+    grid-column: 3 / 3;
+    justify-self: center;
+    text-align: center; /* Faz o terceiro box ocupar duas colunas */
+  }
+  .info-box:nth-child(5) {
+    grid-column: 1 / 4;
+    text-align: center;
+    justify-self: center;
   }
   .info-box h2 {
-    font-family: "Satoshi";
     font-size: 24px;
-    font-weight: 700;
     line-height: 32.4px;
-    text-align: left;
-    color: var(--primary-color);
-    
   }
   
   .info-box p {
-    font-family: "Satoshi";
-    font-size: 12px;
-    font-weight: 400;
-    line-height: 22px;
-    text-align: left;
-    color: var(--neutral-color);
-  }
- 
-  .info-box{
-    padding: 0 40px;
-  }
+    font-size: 12px;  
+  }  
 }
 /*----------------------------- Store Logo ---------------------------------------*/
 
