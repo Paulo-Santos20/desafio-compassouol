@@ -11,6 +11,8 @@
   --primary-color: #000000;
   --search-color: #f0f0f0;
   --neutral-color: #00000099;
+  --discount-color: #00000066;
+  --background-product: #f0eeed;
   --color-neutral-0: #0e0c0c;
   --color-neutral-10: #171717;
   --color-neutral-30: #a8a29e;
@@ -362,7 +364,7 @@ header .fa-bars {
 
 hr {
   border-top: 1px #0000001a; /* Cor e estilo da linha */
-  width: 1px;
+  margin: 64px 0;
 }
 
 .banner-image {
@@ -402,15 +404,11 @@ hr {
   }
 }
 
-
 @media (max-width: 1024px) {
-  .banner-content h1 {   
+  .banner-content h1 {
     width: 100%;
-    font-size:50px ;
-  } 
-  
-  
- 
+    font-size: 50px;
+  }
 }
 
 @media (max-width: 768px) {
@@ -526,7 +524,7 @@ hr {
   text-align: center;
   align-items: center;
   justify-content: center;
-  width: 95%;
+  width: 90%;
   margin: 0 auto;
 }
 
@@ -547,7 +545,7 @@ hr {
   padding: 16px 54px 16px 54px;
   gap: 12px;
   border-radius: 62px;
-  border: 1px solid black;
+  border: 1px solid #0000001A;
   opacity: 0px;
   cursor: pointer;
   margin: 20px 0;
@@ -561,23 +559,38 @@ hr {
 }
 
 .product {
-  width: calc(25% - 20px);
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  width: 295px;
+  border-radius: 20px;
+  text-align: flex-start;
   padding: 10px;
+  box-sizing: border-box;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.product .image-container {
+  background-color: var(--background-product);
+  width: 295px;
+  height: 298px;
   border-radius: 8px;
-  background-color: #fff;
-  text-align: center;
+  overflow: hidden;
 }
 
 .product img {
   width: 100%;
-  height: auto;
+  height: 100%;
+  object-fit: cover;
   border-radius: 8px;
 }
 
 .product h3 {
-  font-size: 18px;
   margin: 10px 0;
+  font-family: "Satoshi";
+  font-size: 20px;
+  font-weight: 700;
+  line-height: 27px;
 }
 
 .rating {
@@ -585,18 +598,76 @@ hr {
   justify-content: center;
   align-items: center;
   font-size: 16px;
-  margin-bottom: 10px;
+  margin-top: -10px;
+}
+.star {
+  font-size: 24px; 
+  color: #ffd700; 
+  position: relative;
+  display: inline-block;
+  line-height: 1; 
 }
 
-.rating .score {
-  margin-left: 5px;
+.star.half {
+  position: relative;
 }
 
+.star.half::before {
+  content: "\2605";
+  font-size: inherit; 
+  color: #ffd700; 
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 50%; 
+  overflow: hidden;
+}
+
+.star.half {
+  color: transparent;
+}
+.score {
+  margin: 10px 0px 5px 5px;
+  font-family: "Satoshi";
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 18.9px;
+}
+.focus {
+  opacity: 0.8;
+}
 .price {
-  font-size: 20px;
-  color: #333;
-  font-weight: bold;
+  margin-top: -8px;
+  font-family: "Satoshi";
+  font-size: 24px;
+  font-weight: 700;
+  line-height: 32.4px;
+  text-align: left; 
+  display: flex; 
+  align-items: center; 
+  gap: 10px;
 }
+
+
+.discount-price {
+  text-decoration: line-through;
+  color: var(--discount-color); 
+
+}
+
+.discount { 
+padding: 6px 14px 6px 14px;
+gap: 12px;
+border-radius: 62px ;
+background-color: #FF33331A;
+color: #FF3333;
+font-family: 'Satoshi';
+font-size: 12px;
+font-weight: 500;
+line-height: 16.2px;
+
+}
+
 /*----------------------------- Dress ---------------------------------------*/
 
 .dress-section {
@@ -604,6 +675,7 @@ hr {
   padding: 20px;
   background-color: var(--search-color);
   border-radius: 40px;
+  margin-top: 80px;
 }
 
 .dress-title {
@@ -666,10 +738,10 @@ hr {
 }
 
 /* Responsive adjustments */
-@media (min-width: 1024px) {
-  .dress-item, .dress-item2 {
+@media (max-width: 1024px) {
+  .dress-item,
+  .dress-item2 {
     width: 100%;
-    
   }
 }
 @media (max-width: 768px) {
