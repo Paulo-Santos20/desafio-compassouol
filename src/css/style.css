@@ -360,8 +360,7 @@ header .fa-bars {
   margin-top: 5px;
 }
 
-hr {
-  border-top: 1px #0000001a; /* Cor e estilo da linha */
+.section-divider {
   margin: 64px 0;
 }
 
@@ -1084,6 +1083,15 @@ footer {
   margin-bottom: 0.75rem;
 }
 
+#footer_contacts p {
+  font-family: "Satoshi";
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 22px;
+  width: 80%;
+  margin-top: 20px;
+}
+
 #footer_social_media {
   display: flex;
   gap: 2rem;
@@ -1112,6 +1120,24 @@ footer {
   list-style: none;
 }
 
+.footer-list li h3 {
+  font-family: "Satoshi";
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 18px;
+  letter-spacing: 3px;
+  margin-bottom: 26px;
+}
+.footer-list li {
+  margin-bottom: 26px;
+  font-family: "Satoshi";
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 19px;
+}
+.footer-list li a {
+  color: var(--neutral-color);
+}
 .footer-list .footer-link {
   color: var(--color-neutral-30);
   transition: all 0.4s;
@@ -1152,26 +1178,72 @@ footer {
 
 #footer_copyright {
   display: flex;
-  justify-content: center;
-  background-color: var(--color-neutral-0);
+  justify-content: space-between;
+  background-color: var(--search-color);
   font-size: 0.9rem;
   padding: 1.5rem;
   font-weight: 100;
+  color: #00000099;
+  padding-bottom: 88px;
 }
-
-@media screen and (max-width: 768px) {
+@media (max-width: 1200px) {
+  #footer_content {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
+@media (max-width: 900px) {
   #footer_content {
     grid-template-columns: repeat(3, 1fr);
-    gap: 2rem;
   }
+
   #footer_contacts {
-    margin-top: 15rem;
+    grid-column: span 2;
+  }
+
+  .footer-list {
+    grid-column: span 1;
+  }
+}
+@media screen and (max-width: 768px) {
+  #footer_content {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  #footer_content {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 2rem;
+    padding-top: 200px;
+  }
+
+  #footer_contacts {
+    grid-column: span 2;
+  }
+  #footer_copyright {
+    flex-direction: column;
+    padding: 20px;
+    align-items: center;
+    justify-content: center;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 18.9px;
+  }
+
+  #footer_copyright .payments {
+    flex-wrap: wrap;
+    gap: 15px;
+  }
+
+  #footer_copyright svg {
+    width: 40px;
   }
 }
 
-@media screen and (max-width: 426px) {
+@media screen and (min-width: 426px) {
   #footer_content {
     grid-template-columns: repeat(1, 2fr);
     padding: 3rem 2rem;
+  }
+  #footer_content {
+    padding-top: 150px;
   }
 }
