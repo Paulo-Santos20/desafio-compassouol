@@ -1,638 +1,738 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
-</head>
-<body>
-    <div class="product-main">
-        <h2 class="title">New Products</h2>
-        <div class="product-grid">
-          <div class="showcase">
-            <div class="showcase-banner">
-              <img src="./assets/images/products/jacket-3.jpg" alt="Mens Winter Leathers Jackets" width="300" class="product-img default">
-              <img src="./assets/images/products/jacket-4.jpg" alt="Mens Winter Leathers Jackets" width="300" class="product-img hover">
-    
-              <p class="showcase-badge">15%</p>
-    
-              <div class="showcase-actions">
-    
-                <button class="btn-action">
-                  <ion-icon name="heart-outline"></ion-icon>
-                </button>
-    
-                <button class="btn-action">
-                  <ion-icon name="eye-outline"></ion-icon>
-                </button>
-    
-                <button class="btn-action">
-                  <ion-icon name="repeat-outline"></ion-icon>
-                </button>
-    
-                <button class="btn-action">
-                  <ion-icon name="bag-add-outline"></ion-icon>
-                </button>
-    
+    <link rel="stylesheet" href="/src/css/pages/category/core-style.css" />
+    <link rel="stylesheet" href="/src/css/pages/category/category.css" />
+    <script src="/src/js/pages/category/category.js" defer></script>
+    <script src="/src/js/pages/category/slide.js" defer></script>
+  </head>
+  <header></header>
+
+  <body>
+    <main>
+      <!-- ##### Shop Grid Area Start ##### -->
+      <section class="shop_grid_area section-padding-80">
+        <div class="container">
+          <div class="row">
+            <div class="col-12 col-md-4 col-lg-3">
+              <div class="shop_sidebar_area">
+                <!-- ##### Single Widget ##### -->
+                <div class="widget catagory mb-50">
+                  <!-- Widget Title -->
+                  <h6 class="widget-title mb-30">
+                    Filters
+                    <svg
+                      width="24"
+                      height="25"
+                      viewBox="0 0 24 25"
+                      fill="none"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <path
+                        d="M13.125 12.125V20.75C13.125 21.0484 13.0065 21.3345 12.7955 21.5455C12.5845 21.7565 12.2984 21.875 12 21.875C11.7016 21.875 11.4155 21.7565 11.2045 21.5455C10.9935 21.3345 10.875 21.0484 10.875 20.75V12.125C10.875 11.8266 10.9935 11.5405 11.2045 11.3295C11.4155 11.1185 11.7016 11 12 11C12.2984 11 12.5845 11.1185 12.7955 11.3295C13.0065 11.5405 13.125 11.8266 13.125 12.125ZM18.75 18.5C18.4516 18.5 18.1655 18.6185 17.9545 18.8295C17.7435 19.0405 17.625 19.3266 17.625 19.625V20.75C17.625 21.0484 17.7435 21.3345 17.9545 21.5455C18.1655 21.7565 18.4516 21.875 18.75 21.875C19.0484 21.875 19.3345 21.7565 19.5455 21.5455C19.7565 21.3345 19.875 21.0484 19.875 20.75V19.625C19.875 19.3266 19.7565 19.0405 19.5455 18.8295C19.3345 18.6185 19.0484 18.5 18.75 18.5ZM21 14.75H19.875V4.25C19.875 3.95163 19.7565 3.66548 19.5455 3.4545C19.3345 3.24353 19.0484 3.125 18.75 3.125C18.4516 3.125 18.1655 3.24353 17.9545 3.4545C17.7435 3.66548 17.625 3.95163 17.625 4.25V14.75H16.5C16.2016 14.75 15.9155 14.8685 15.7045 15.0795C15.4935 15.2905 15.375 15.5766 15.375 15.875C15.375 16.1734 15.4935 16.4595 15.7045 16.6705C15.9155 16.8815 16.2016 17 16.5 17H21C21.2984 17 21.5845 16.8815 21.7955 16.6705C22.0065 16.4595 22.125 16.1734 22.125 15.875C22.125 15.5766 22.0065 15.2905 21.7955 15.0795C21.5845 14.8685 21.2984 14.75 21 14.75ZM5.25 15.5C4.95163 15.5 4.66548 15.6185 4.4545 15.8295C4.24353 16.0405 4.125 16.3266 4.125 16.625V20.75C4.125 21.0484 4.24353 21.3345 4.4545 21.5455C4.66548 21.7565 4.95163 21.875 5.25 21.875C5.54837 21.875 5.83452 21.7565 6.0455 21.5455C6.25647 21.3345 6.375 21.0484 6.375 20.75V16.625C6.375 16.3266 6.25647 16.0405 6.0455 15.8295C5.83452 15.6185 5.54837 15.5 5.25 15.5ZM7.5 11.75H6.375V4.25C6.375 3.95163 6.25647 3.66548 6.0455 3.4545C5.83452 3.24353 5.54837 3.125 5.25 3.125C4.95163 3.125 4.66548 3.24353 4.4545 3.4545C4.24353 3.66548 4.125 3.95163 4.125 4.25V11.75H3C2.70163 11.75 2.41548 11.8685 2.2045 12.0795C1.99353 12.2905 1.875 12.5766 1.875 12.875C1.875 13.1734 1.99353 13.4595 2.2045 13.6705C2.41548 13.8815 2.70163 14 3 14H7.5C7.79837 14 8.08452 13.8815 8.2955 13.6705C8.50647 13.4595 8.625 13.1734 8.625 12.875C8.625 12.5766 8.50647 12.2905 8.2955 12.0795C8.08452 11.8685 7.79837 11.75 7.5 11.75ZM14.25 7.25H13.125V4.25C13.125 3.95163 13.0065 3.66548 12.7955 3.4545C12.5845 3.24353 12.2984 3.125 12 3.125C11.7016 3.125 11.4155 3.24353 11.2045 3.4545C10.9935 3.66548 10.875 3.95163 10.875 4.25V7.25H9.75C9.45163 7.25 9.16548 7.36853 8.9545 7.5795C8.74353 7.79048 8.625 8.07663 8.625 8.375C8.625 8.67337 8.74353 8.95952 8.9545 9.1705C9.16548 9.38147 9.45163 9.5 9.75 9.5H14.25C14.5484 9.5 14.8345 9.38147 15.0455 9.1705C15.2565 8.95952 15.375 8.67337 15.375 8.375C15.375 8.07663 15.2565 7.79048 15.0455 7.5795C14.8345 7.36853 14.5484 7.25 14.25 7.25Z"
+                        fill="black"
+                        fill-opacity="0.4"
+                      />
+                    </svg>
+                  </h6>
+
+                  <!--  Catagories  -->
+                  <div class="catagories-menu">
+                    <ul id="menu-content2" class="menu-content collapse show">
+                      <!-- Single Item -->
+                      <li data-toggle="collapse" data-target="#clothing">
+                        <a href="#"
+                          >Clothing<svg
+                            width="7"
+                            height="12"
+                            viewBox="0 0 7 12"
+                            fill="none"
+                            xmlns="http://www.w3.org/2000/svg"
+                          >
+                            <path
+                              d="M1.53073 0.469402L6.53073 5.4694C6.60065 5.53908 6.65613 5.62187 6.69399 5.71304C6.73184 5.8042 6.75133 5.90194 6.75133 6.00065C6.75133 6.09936 6.73184 6.1971 6.69399 6.28827C6.65613 6.37943 6.60065 6.46222 6.53073 6.5319L1.53073 11.5319C1.38984 11.6728 1.19874 11.752 0.999484 11.752C0.800227 11.752 0.609131 11.6728 0.468235 11.5319C0.327338 11.391 0.248184 11.1999 0.248184 11.0007C0.248184 10.8014 0.327338 10.6103 0.468235 10.4694L4.93761 6.00003L0.46761 1.53065C0.326714 1.38976 0.247559 1.19866 0.247559 0.999403C0.247559 0.800145 0.326714 0.609049 0.46761 0.468153C0.608506 0.327257 0.799603 0.2481 0.99886 0.2481C1.19812 0.2481 1.38921 0.327257 1.53011 0.468153L1.53073 0.469402Z"
+                              fill="black"
+                              fill-opacity="0.6"
+                            />
+                          </svg>
+                        </a>
+                        <ul class="sub-menu collapse show" id="clothing">
+                          <li><a href="#">All</a></li>
+                          <li><a href="#">Bodysuits</a></li>
+                          <li><a href="#">Dresses</a></li>
+                          <li><a href="#">Hoodies &amp; Sweats</a></li>
+                          <li><a href="#">Jackets &amp; Coats</a></li>
+                        </ul>
+                      </li>
+                      <!-- Single Item -->
+                      <li
+                        data-toggle="collapse"
+                        data-target="#shoes"
+                        class="collapsed"
+                      >
+                        <a href="#"
+                          >Shoes<svg
+                            width="7"
+                            height="12"
+                            viewBox="0 0 7 12"
+                            fill="none"
+                            xmlns="http://www.w3.org/2000/svg"
+                          >
+                            <path
+                              d="M1.53073 0.469402L6.53073 5.4694C6.60065 5.53908 6.65613 5.62187 6.69399 5.71304C6.73184 5.8042 6.75133 5.90194 6.75133 6.00065C6.75133 6.09936 6.73184 6.1971 6.69399 6.28827C6.65613 6.37943 6.60065 6.46222 6.53073 6.5319L1.53073 11.5319C1.38984 11.6728 1.19874 11.752 0.999484 11.752C0.800227 11.752 0.609131 11.6728 0.468235 11.5319C0.327338 11.391 0.248184 11.1999 0.248184 11.0007C0.248184 10.8014 0.327338 10.6103 0.468235 10.4694L4.93761 6.00003L0.46761 1.53065C0.326714 1.38976 0.247559 1.19866 0.247559 0.999403C0.247559 0.800145 0.326714 0.609049 0.46761 0.468153C0.608506 0.327257 0.799603 0.2481 0.99886 0.2481C1.19812 0.2481 1.38921 0.327257 1.53011 0.468153L1.53073 0.469402Z"
+                              fill="black"
+                              fill-opacity="0.6"
+                            />
+                          </svg>
+                        </a>
+                        <ul class="sub-menu collapse" id="shoes">
+                          <li><a href="#">All</a></li>
+                          <li><a href="#">Boots</a></li>
+                          <li><a href="#">Sandals</a></li>
+                          <li><a href="#">Sneakers</a></li>
+                          <li><a href="#">Heels</a></li>
+                        </ul>
+                      </li>
+                      <!-- Single Item -->
+                      <li
+                        data-toggle="collapse"
+                        data-target="#accessories"
+                        class="collapsed"
+                      >
+                        <a href="#"
+                          >Accessories<svg
+                            width="7"
+                            height="12"
+                            viewBox="0 0 7 12"
+                            fill="none"
+                            xmlns="http://www.w3.org/2000/svg"
+                          >
+                            <path
+                              d="M1.53073 0.469402L6.53073 5.4694C6.60065 5.53908 6.65613 5.62187 6.69399 5.71304C6.73184 5.8042 6.75133 5.90194 6.75133 6.00065C6.75133 6.09936 6.73184 6.1971 6.69399 6.28827C6.65613 6.37943 6.60065 6.46222 6.53073 6.5319L1.53073 11.5319C1.38984 11.6728 1.19874 11.752 0.999484 11.752C0.800227 11.752 0.609131 11.6728 0.468235 11.5319C0.327338 11.391 0.248184 11.1999 0.248184 11.0007C0.248184 10.8014 0.327338 10.6103 0.468235 10.4694L4.93761 6.00003L0.46761 1.53065C0.326714 1.38976 0.247559 1.19866 0.247559 0.999403C0.247559 0.800145 0.326714 0.609049 0.46761 0.468153C0.608506 0.327257 0.799603 0.2481 0.99886 0.2481C1.19812 0.2481 1.38921 0.327257 1.53011 0.468153L1.53073 0.469402Z"
+                              fill="black"
+                              fill-opacity="0.6"
+                            />
+                          </svg>
+                        </a>
+                        <ul class="sub-menu collapse" id="accessories">
+                          <li><a href="#">All</a></li>
+                          <li><a href="#">Belts</a></li>
+                          <li><a href="#">Hats</a></li>
+                          <li><a href="#">Scarves</a></li>
+                          <li><a href="#">Jewelry</a></li>
+                        </ul>
+                      </li>
+                      <!-- Single Item -->
+                      <li
+                        data-toggle="collapse"
+                        data-target="#bags"
+                        class="collapsed"
+                      >
+                        <a href="#"
+                          >Bags<svg
+                            width="7"
+                            height="12"
+                            viewBox="0 0 7 12"
+                            fill="none"
+                            xmlns="http://www.w3.org/2000/svg"
+                          >
+                            <path
+                              d="M1.53073 0.469402L6.53073 5.4694C6.60065 5.53908 6.65613 5.62187 6.69399 5.71304C6.73184 5.8042 6.75133 5.90194 6.75133 6.00065C6.75133 6.09936 6.73184 6.1971 6.69399 6.28827C6.65613 6.37943 6.60065 6.46222 6.53073 6.5319L1.53073 11.5319C1.38984 11.6728 1.19874 11.752 0.999484 11.752C0.800227 11.752 0.609131 11.6728 0.468235 11.5319C0.327338 11.391 0.248184 11.1999 0.248184 11.0007C0.248184 10.8014 0.327338 10.6103 0.468235 10.4694L4.93761 6.00003L0.46761 1.53065C0.326714 1.38976 0.247559 1.19866 0.247559 0.999403C0.247559 0.800145 0.326714 0.609049 0.46761 0.468153C0.608506 0.327257 0.799603 0.2481 0.99886 0.2481C1.19812 0.2481 1.38921 0.327257 1.53011 0.468153L1.53073 0.469402Z"
+                              fill="black"
+                              fill-opacity="0.6"
+                            />
+                          </svg>
+                        </a>
+                        <ul class="sub-menu collapse" id="bags">
+                          <li><a href="#">All</a></li>
+                          <li><a href="#">Backpacks</a></li>
+                          <li><a href="#">Handbags</a></li>
+                          <li><a href="#">Clutches</a></li>
+                          <li><a href="#">Luggage</a></li>
+                        </ul>
+                      </li>
+                      <!-- Single Item -->
+                      <li
+                        data-toggle="collapse"
+                        data-target="#beauty"
+                        class="collapsed"
+                      >
+                        <a href="#"
+                          >Beauty<svg
+                            width="7"
+                            height="12"
+                            viewBox="0 0 7 12"
+                            fill="none"
+                            xmlns="http://www.w3.org/2000/svg"
+                          >
+                            <path
+                              d="M1.53073 0.469402L6.53073 5.4694C6.60065 5.53908 6.65613 5.62187 6.69399 5.71304C6.73184 5.8042 6.75133 5.90194 6.75133 6.00065C6.75133 6.09936 6.73184 6.1971 6.69399 6.28827C6.65613 6.37943 6.60065 6.46222 6.53073 6.5319L1.53073 11.5319C1.38984 11.6728 1.19874 11.752 0.999484 11.752C0.800227 11.752 0.609131 11.6728 0.468235 11.5319C0.327338 11.391 0.248184 11.1999 0.248184 11.0007C0.248184 10.8014 0.327338 10.6103 0.468235 10.4694L4.93761 6.00003L0.46761 1.53065C0.326714 1.38976 0.247559 1.19866 0.247559 0.999403C0.247559 0.800145 0.326714 0.609049 0.46761 0.468153C0.608506 0.327257 0.799603 0.2481 0.99886 0.2481C1.19812 0.2481 1.38921 0.327257 1.53011 0.468153L1.53073 0.469402Z"
+                              fill="black"
+                              fill-opacity="0.6"
+                            />
+                          </svg>
+                        </a>
+                        <ul class="sub-menu collapse" id="beauty">
+                          <li><a href="#">All</a></li>
+                          <li><a href="#">Makeup</a></li>
+                          <li><a href="#">Skincare</a></li>
+                          <li><a href="#">Haircare</a></li>
+                          <li><a href="#">Fragrances</a></li>
+                        </ul>
+                      </li>
+                      <!-- Single Item -->
+                      <li
+                        data-toggle="collapse"
+                        data-target="#accessories"
+                        class="collapsed"
+                      >
+                        <a href="#"
+                          >Accessories<svg
+                            width="7"
+                            height="12"
+                            viewBox="0 0 7 12"
+                            fill="none"
+                            xmlns="http://www.w3.org/2000/svg"
+                          >
+                            <path
+                              d="M1.53073 0.469402L6.53073 5.4694C6.60065 5.53908 6.65613 5.62187 6.69399 5.71304C6.73184 5.8042 6.75133 5.90194 6.75133 6.00065C6.75133 6.09936 6.73184 6.1971 6.69399 6.28827C6.65613 6.37943 6.60065 6.46222 6.53073 6.5319L1.53073 11.5319C1.38984 11.6728 1.19874 11.752 0.999484 11.752C0.800227 11.752 0.609131 11.6728 0.468235 11.5319C0.327338 11.391 0.248184 11.1999 0.248184 11.0007C0.248184 10.8014 0.327338 10.6103 0.468235 10.4694L4.93761 6.00003L0.46761 1.53065C0.326714 1.38976 0.247559 1.19866 0.247559 0.999403C0.247559 0.800145 0.326714 0.609049 0.46761 0.468153C0.608506 0.327257 0.799603 0.2481 0.99886 0.2481C1.19812 0.2481 1.38921 0.327257 1.53011 0.468153L1.53073 0.469402Z"
+                              fill="black"
+                              fill-opacity="0.6"
+                            />
+                          </svg>
+                        </a>
+                        <ul class="sub-menu collapse" id="accessories-menu">
+                          <li><a href="#">All</a></li>
+                          <li><a href="#">Bodysuits</a></li>
+                          <li><a href="#">Dresses</a></li>
+                          <li><a href="#">Hoodies &amp; Sweats</a></li>
+                          <li><a href="#">Jackets &amp; Coats</a></li>
+                          <li><a href="#">Jeans</a></li>
+                          <li><a href="#">Pants &amp; Leggings</a></li>
+                          <li><a href="#">Rompers &amp; Jumpsuits</a></li>
+                          <li><a href="#">Shirts &amp; Blouses</a></li>
+                          <li><a href="#">Shirts</a></li>
+                          <li><a href="#">Sweaters &amp; Knits</a></li>
+                        </ul>
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+
+                <!-- ##### Single Widget ##### -->
+                <div class="widget price mb-50">
+                  <!-- Widget Title 2 -->
+                  <p class="widget-title2 mb-30">Price</p>
+
+                  <div class="widget-desc">
+                    <div class="slider-range">
+                      <input
+                        type="range"
+                        id="min-price"
+                        min="49"
+                        max="360"
+                        value="49"
+                        step="1"
+                      />
+                      <input
+                        type="range"
+                        id="max-price"
+                        min="49"
+                        max="360"
+                        value="360"
+                        step="1"
+                      />
+                    </div>
+                    <div class="range-values">
+                      <span id="min-value">$49</span>
+                      <span id="max-value">$360</span>
+                    </div>
+                  </div>
+                </div>
+
+                <!-- ##### Single Widget ##### -->
+                <div class="widget color mb-50">
+                  <!-- Widget Title 2 -->
+                  <p class="widget-title2 mb-30">Color</p>
+                  <div class="widget-desc">
+                    <ul class="d-flex">
+                      <li><a href="#" class="color color1"></a></li>
+                      <li><a href="#" class="color color2"></a></li>
+                      <li><a href="#" class="color color3"></a></li>
+                      <li><a href="#" class="color color4"></a></li>
+                      <li><a href="#" class="color color5"></a></li>
+                      <li><a href="#" class="color color6"></a></li>
+                      <li><a href="#" class="color color7"></a></li>
+                      <li><a href="#" class="color color8"></a></li>
+                      <li><a href="#" class="color color9"></a></li>
+                      <li><a href="#" class="color color10"></a></li>
+                    </ul>
+                  </div>
+                </div>
+
+                <div class="container">
+                  <h1>Sizes</h1>
+                  <div class="sizes">
+                    <button class="size-btn">XX-SMALL</button>
+                    <button class="size-btn">X-SMALL</button>
+                    <button class="size-btn">SMALL</button>
+                    <button class="size-btn">MEDIUM</button>
+                    <button class="size-btn">LARGE</button>
+                    <button class="size-btn">X-LARGE</button>
+                    <button class="size-btn">2X-LARGE</button>
+                    <button class="size-btn">3X-LARGE</button>
+                    <button class="size-btn">4X-LARGE</button>
+                  </div>
+                </div>
+
+                <div class="container">
+                  <h1>Dress Style</h1>
+                  <div class="categories">
+                      <div class="category">Casual</div>
+                      <div class="category">Formal</div>
+                      <div class="category">Party</div>
+                      <div class="category">Gym</div>
+                  </div>
+                  <button class="apply-filter">Apply Filter</button>
               </div>
-    
-            </div>
-    
-            <div class="showcase-content">
-    
-              <a href="#" class="showcase-category">jacket</a>
-    
-              <a href="#">
-                <h3 class="showcase-title">Mens Winter Leathers Jackets</h3>
-              </a>
-    
-              <div class="showcase-rating">
-                <ion-icon name="star"></ion-icon>
-                <ion-icon name="star"></ion-icon>
-                <ion-icon name="star"></ion-icon>
-                <ion-icon name="star-outline"></ion-icon>
-                <ion-icon name="star-outline"></ion-icon>
-              </div>
-    
-              <div class="price-box">
-                <p class="price">$48.00</p>
-                <del>$75.00</del>
-              </div>
-    
-            </div>
-    
-          </div>
-    
-          <div class="showcase">
-          
-            <div class="showcase-banner">
-              <img src="./assets/images/products/shirt-1.jpg" alt="Pure Garment Dyed Cotton Shirt" class="product-img default"
-                width="300">
-              <img src="./assets/images/products/shirt-2.jpg" alt="Pure Garment Dyed Cotton Shirt" class="product-img hover"
-                width="300">
-          
-              <p class="showcase-badge angle black">sale</p>
-          
-              <div class="showcase-actions">
-                <button class="btn-action">
-                  <ion-icon name="heart-outline"></ion-icon>
-                </button>
-          
-                <button class="btn-action">
-                  <ion-icon name="eye-outline"></ion-icon>
-                </button>
-          
-                <button class="btn-action">
-                  <ion-icon name="repeat-outline"></ion-icon>
-                </button>
-          
-                <button class="btn-action">
-                  <ion-icon name="bag-add-outline"></ion-icon>
-                </button>
-              </div>
-            </div>
-          
-            <div class="showcase-content">
-              <a href="#" class="showcase-category">shirt</a>
-          
-              <h3>
-                <a href="#" class="showcase-title">Pure Garment Dyed Cotton Shirt</a>
-              </h3>
-          
-              <div class="showcase-rating">
-                <ion-icon name="star"></ion-icon>
-                <ion-icon name="star"></ion-icon>
-                <ion-icon name="star"></ion-icon>
-                <ion-icon name="star-outline"></ion-icon>
-                <ion-icon name="star-outline"></ion-icon>
-              </div>
-          
-              <div class="price-box">
-                <p class="price">$45.00</p>
-                <del>$56.00</del>
-              </div>
-          
-            </div>
-          
-          </div>
-    
-          <div class="showcase">
-          
-            <div class="showcase-banner">
-              <img src="./assets/images/products/jacket-5.jpg" alt="MEN Yarn Fleece Full-Zip Jacket" class="product-img default"
-                width="300">
-              <img src="./assets/images/products/jacket-6.jpg" alt="MEN Yarn Fleece Full-Zip Jacket" class="product-img hover"
-                width="300">
-          
-              <div class="showcase-actions">
-                <button class="btn-action">
-                  <ion-icon name="heart-outline"></ion-icon>
-                </button>
-          
-                <button class="btn-action">
-                  <ion-icon name="eye-outline"></ion-icon>
-                </button>
-          
-                <button class="btn-action">
-                  <ion-icon name="repeat-outline"></ion-icon>
-                </button>
-          
-                <button class="btn-action">
-                  <ion-icon name="bag-add-outline"></ion-icon>
-                </button>
-              </div>
-            </div>
-          
-            <div class="showcase-content">
-              <a href="#" class="showcase-category">Jacket</a>
-          
-              <h3>
-                <a href="#" class="showcase-title">MEN Yarn Fleece Full-Zip Jacket</a>
-              </h3>
-          
-              <div class="showcase-rating">
-                <ion-icon name="star"></ion-icon>
-                <ion-icon name="star"></ion-icon>
-                <ion-icon name="star"></ion-icon>
-                <ion-icon name="star-outline"></ion-icon>
-                <ion-icon name="star-outline"></ion-icon>
-              </div>
-          
-              <div class="price-box">
-                <p class="price">$58.00</p>
-                <del>$65.00</del>
-              </div>
-          
-            </div>
-          
-          </div>
-    
-          <div class="showcase">
-          
-            <div class="showcase-banner">
-              <img src="./assets/images/products/clothes-3.jpg" alt="Black Floral Wrap Midi Skirt" class="product-img default"
-                width="300">
-              <img src="./assets/images/products/clothes-4.jpg" alt="Black Floral Wrap Midi Skirt" class="product-img hover"
-                width="300">
-          
-              <p class="showcase-badge angle pink">new</p>
-          
-              <div class="showcase-actions">
-                <button class="btn-action">
-                  <ion-icon name="heart-outline"></ion-icon>
-                </button>
-          
-                <button class="btn-action">
-                  <ion-icon name="eye-outline"></ion-icon>
-                </button>
-          
-                <button class="btn-action">
-                  <ion-icon name="repeat-outline"></ion-icon>
-                </button>
-          
-                <button class="btn-action">
-                  <ion-icon name="bag-add-outline"></ion-icon>
-                </button>
-              </div>
-            </div>
-          
-            <div class="showcase-content">
-              <a href="#" class="showcase-category">skirt</a>
-          
-              <h3>
-                <a href="#" class="showcase-title">Black Floral Wrap Midi Skirt</a>
-              </h3>
-          
-              <div class="showcase-rating">
-                <ion-icon name="star"></ion-icon>
-                <ion-icon name="star"></ion-icon>
-                <ion-icon name="star"></ion-icon>
-                <ion-icon name="star"></ion-icon>
-                <ion-icon name="star"></ion-icon>
-              </div>
-          
-              <div class="price-box">
-                <p class="price">$25.00</p>
-                <del>$35.00</del>
-              </div>
-          
-            </div>
-          
-          </div>
-    
-          <div class="showcase">
-          
-            <div class="showcase-banner">
-              <img src="./assets/images/products/shoe-2.jpg" alt="Casual Men's Brown shoes" class="product-img default"
-                width="300">
-              <img src="./assets/images/products/shoe-2_1.jpg" alt="Casual Men's Brown shoes" class="product-img hover"
-                width="300">
-          
-              <div class="showcase-actions">
-                <button class="btn-action">
-                  <ion-icon name="heart-outline"></ion-icon>
-                </button>
-          
-                <button class="btn-action">
-                  <ion-icon name="eye-outline"></ion-icon>
-                </button>
-          
-                <button class="btn-action">
-                  <ion-icon name="repeat-outline"></ion-icon>
-                </button>
-          
-                <button class="btn-action">
-                  <ion-icon name="bag-add-outline"></ion-icon>
-                </button>
-              </div>
-            </div>
-          
-            <div class="showcase-content">
-              <a href="#" class="showcase-category">casual</a>
-          
-              <h3>
-                <a href="#" class="showcase-title">Casual Men's Brown shoes</a>
-              </h3>
-          
-              <div class="showcase-rating">
-                <ion-icon name="star"></ion-icon>
-                <ion-icon name="star"></ion-icon>
-                <ion-icon name="star"></ion-icon>
-                <ion-icon name="star"></ion-icon>
-                <ion-icon name="star"></ion-icon>
-              </div>
-          
-              <div class="price-box">
-                <p class="price">$99.00</p>
-                <del>$105.00</del>
-              </div>
-          
-            </div>
-          
-          </div>
-    
-          <div class="showcase">
-          
-            <div class="showcase-banner">
-              <img src="./assets/images/products/watch-3.jpg" alt="Pocket Watch Leather Pouch" class="product-img default"
-                width="300">
-              <img src="./assets/images/products/watch-4.jpg" alt="Pocket Watch Leather Pouch" class="product-img hover"
-                width="300">
-          
-              <p class="showcase-badge angle black">sale</p>
-          
-              <div class="showcase-actions">
-                <button class="btn-action">
-                  <ion-icon name="heart-outline"></ion-icon>
-                </button>
-          
-                <button class="btn-action">
-                  <ion-icon name="eye-outline"></ion-icon>
-                </button>
-          
-                <button class="btn-action">
-                  <ion-icon name="repeat-outline"></ion-icon>
-                </button>
-          
-                <button class="btn-action">
-                  <ion-icon name="bag-add-outline"></ion-icon>
-                </button>
-              </div>
-            </div>
-          
-            <div class="showcase-content">
-              <a href="#" class="showcase-category">watches</a>
-          
-              <h3>
-                <a href="#" class="showcase-title">Pocket Watch Leather Pouch</a>
-              </h3>
-          
-              <div class="showcase-rating">
-                <ion-icon name="star"></ion-icon>
-                <ion-icon name="star"></ion-icon>
-                <ion-icon name="star"></ion-icon>
-                <ion-icon name="star-outline"></ion-icon>
-                <ion-icon name="star-outline"></ion-icon>
-              </div>
-          
-              <div class="price-box">
-                <p class="price">$150.00</p>
-                <del>$170.00</del>
-              </div>
-          
-            </div>
-          
-          </div>
-    
-          <div class="showcase">
-          
-            <div class="showcase-banner">
-              <img src="./assets/images/products/watch-1.jpg" alt="Smart watche Vital Plus" class="product-img default"
-                width="300">
-              <img src="./assets/images/products/watch-2.jpg" alt="Smart watche Vital Plus" class="product-img hover" width="300">
-          
-              <div class="showcase-actions">
-                <button class="btn-action">
-                  <ion-icon name="heart-outline"></ion-icon>
-                </button>
-          
-                <button class="btn-action">
-                  <ion-icon name="eye-outline"></ion-icon>
-                </button>
-          
-                <button class="btn-action">
-                  <ion-icon name="repeat-outline"></ion-icon>
-                </button>
-          
-                <button class="btn-action">
-                  <ion-icon name="bag-add-outline"></ion-icon>
-                </button>
+
               </div>
             </div>
-          
-            <div class="showcase-content">
-              <a href="#" class="showcase-category">watches</a>
-          
-              <h3>
-                <a href="#" class="showcase-title">Smart watche Vital Plus</a>
-              </h3>
-          
-              <div class="showcase-rating">
-                <ion-icon name="star"></ion-icon>
-                <ion-icon name="star"></ion-icon>
-                <ion-icon name="star"></ion-icon>
-                <ion-icon name="star"></ion-icon>
-                <ion-icon name="star-outline"></ion-icon>
+
+            <div class="col-12 col-md-8 col-lg-9">
+              <div class="shop_grid_product_area">
+                <div class="row">
+                  <div class="col-12">
+                    <div
+                      class="product-topbar d-flex align-items-center justify-content-between"
+                    >
+                      <!-- Total Products -->
+                      <div class="total-products">
+                        <p><span><i class="fas fa-caret-square-left    "></i></span> Casual</p>
+                      </div>
+                      <!-- Sorting -->
+                      <div class="product-sorting d-flex">
+                        <p>Showing 1-10 of 100 Products Sort by:</p>
+                        <form action="#" method="get">
+                          <select name="select" id="sortByselect">
+                            <option value="value">Most Popular</option>
+                            <option value="value">Highest Rated</option>
+                            <option value="value">Newest</option>
+                            <option value="value">Price: $$ - $</option>
+                            <option value="value">Price: $ - $$</option>
+                          </select>
+                          <input type="submit" class="d-none" value="" />
+                        </form>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="row">
+                  <!-- Single Product -->
+                  <div>
+                    <div class="single-product-wrapper">
+                      <!-- Product Image -->
+                      <div class="product-img">
+                        <img src="/src/assets/images/" alt="" />
+                        <!-- Hover Thumb -->
+                        <img
+                          class="hover-img"
+                          src="img/product-img/product-2.jpg"
+                          alt=""
+                        />
+
+                        <!-- Product Badge -->
+                        <div class="product-badge offer-badge">
+                          <span>-30%</span>
+                        </div>
+                        <!-- Favourite -->
+                        <div class="product-favourite">
+                          <a href="#" class="favme fa fa-heart"></a>
+                        </div>
+                      </div>
+
+                      <!-- Product Description -->
+                      <div class="product-description">
+                        <span>topshop</span>
+                        <a href="single-product-details.html">
+                          <h6>Knot Front Mini Dress</h6>
+                        </a>
+                        <p class="product-price">
+                          <span class="old-price">$75.00</span> $55.00
+                        </p>
+
+                        <!-- Hover Content -->
+                        <div class="hover-content">
+                          <!-- Add to Cart -->
+                          <div class="add-to-cart-btn">
+                            <a href="#" class="btn essence-btn">Add to Cart</a>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+
+                  <!-- Single Product -->
+                  <div class="col-12 col-sm-6 col-lg-4">
+                    <div class="single-product-wrapper">
+                      <!-- Product Image -->
+                      <div class="product-img">
+                        <img src="img/product-img/product-2.jpg" alt="" />
+                        <!-- Hover Thumb -->
+                        <img
+                          class="hover-img"
+                          src="img/product-img/product-3.jpg"
+                          alt=""
+                        />
+
+                        <!-- Favourite -->
+                        <div class="product-favourite">
+                          <a href="#" class="favme fa fa-heart"></a>
+                        </div>
+                      </div>
+
+                      <!-- Product Description -->
+                      <div class="product-description">
+                        <span>topshop</span>
+                        <a href="single-product-details.html">
+                          <h6>Knot Front Mini Dress</h6>
+                        </a>
+                        <p class="product-price">$80.00</p>
+
+                        <!-- Hover Content -->
+                        <div class="hover-content">
+                          <!-- Add to Cart -->
+                          <div class="add-to-cart-btn">
+                            <a href="#" class="btn essence-btn">Add to Cart</a>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+
+                  <!-- Single Product -->
+                  <div class="col-12 col-sm-6 col-lg-4">
+                    <div class="single-product-wrapper">
+                      <!-- Product Image -->
+                      <div class="product-img">
+                        <img src="img/product-img/product-3.jpg" alt="" />
+                        <!-- Hover Thumb -->
+                        <img
+                          class="hover-img"
+                          src="img/product-img/product-4.jpg"
+                          alt=""
+                        />
+
+                        <!-- Product Badge -->
+                        <div class="product-badge new-badge">
+                          <span>New</span>
+                        </div>
+
+                        <!-- Favourite -->
+                        <div class="product-favourite">
+                          <a href="#" class="favme fa fa-heart"></a>
+                        </div>
+                      </div>
+
+                      <!-- Product Description -->
+                      <div class="product-description">
+                        <span>topshop</span>
+                        <a href="single-product-details.html">
+                          <h6>Knot Front Mini Dress</h6>
+                        </a>
+                        <p class="product-price">$80.00</p>
+
+                        <!-- Hover Content -->
+                        <div class="hover-content">
+                          <!-- Add to Cart -->
+                          <div class="add-to-cart-btn">
+                            <a href="#" class="btn essence-btn">Add to Cart</a>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+
+                  <!-- Single Product -->
+                  <div class="col-12 col-sm-6 col-lg-4">
+                    <div class="single-product-wrapper">
+                      <!-- Product Image -->
+                      <div class="product-img">
+                        <img src="img/product-img/product-4.jpg" alt="" />
+                        <!-- Hover Thumb -->
+                        <img
+                          class="hover-img"
+                          src="img/product-img/product-5.jpg"
+                          alt=""
+                        />
+
+                        <!-- Favourite -->
+                        <div class="product-favourite">
+                          <a href="#" class="favme fa fa-heart"></a>
+                        </div>
+                      </div>
+
+                      <!-- Product Description -->
+                      <div class="product-description">
+                        <span>topshop</span>
+                        <a href="single-product-details.html">
+                          <h6>Knot Front Mini Dress</h6>
+                        </a>
+                        <p class="product-price">$80.00</p>
+
+                        <!-- Hover Content -->
+                        <div class="hover-content">
+                          <!-- Add to Cart -->
+                          <div class="add-to-cart-btn">
+                            <a href="#" class="btn essence-btn">Add to Cart</a>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+
+                  <!-- Single Product -->
+                  <div class="col-12 col-sm-6 col-lg-4">
+                    <div class="single-product-wrapper">
+                      <!-- Product Image -->
+                      <div class="product-img">
+                        <img src="img/product-img/product-5.jpg" alt="" />
+                        <!-- Hover Thumb -->
+                        <img
+                          class="hover-img"
+                          src="img/product-img/product-6.jpg"
+                          alt=""
+                        />
+
+                        <!-- Product Badge -->
+                        <div class="product-badge offer-badge">
+                          <span>-30%</span>
+                        </div>
+
+                        <!-- Favourite -->
+                        <div class="product-favourite">
+                          <a href="#" class="favme fa fa-heart"></a>
+                        </div>
+                      </div>
+
+                      <!-- Product Description -->
+                      <div class="product-description">
+                        <span>topshop</span>
+                        <a href="single-product-details.html">
+                          <h6>Knot Front Mini Dress</h6>
+                        </a>
+                        <p class="product-price">
+                          <span class="old-price">$75.00</span> $55.00
+                        </p>
+
+                        <!-- Hover Content -->
+                        <div class="hover-content">
+                          <!-- Add to Cart -->
+                          <div class="add-to-cart-btn">
+                            <a href="#" class="btn essence-btn">Add to Cart</a>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+
+                  <!-- Single Product -->
+                  <div class="col-12 col-sm-6 col-lg-4">
+                    <div class="single-product-wrapper">
+                      <!-- Product Image -->
+                      <div class="product-img">
+                        <img src="img/product-img/product-6.jpg" alt="" />
+                        <!-- Hover Thumb -->
+                        <img
+                          class="hover-img"
+                          src="img/product-img/product-7.jpg"
+                          alt=""
+                        />
+
+                        <!-- Favourite -->
+                        <div class="product-favourite">
+                          <a href="#" class="favme fa fa-heart"></a>
+                        </div>
+                      </div>
+
+                      <!-- Product Description -->
+                      <div class="product-description">
+                        <span>topshop</span>
+                        <a href="single-product-details.html">
+                          <h6>Knot Front Mini Dress</h6>
+                        </a>
+                        <p class="product-price">$80.00</p>
+
+                        <!-- Hover Content -->
+                        <div class="hover-content">
+                          <!-- Add to Cart -->
+                          <div class="add-to-cart-btn">
+                            <a href="#" class="btn essence-btn">Add to Cart</a>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+
+                  <!-- Single Product -->
+                  <div class="col-12 col-sm-6 col-lg-4">
+                    <div class="single-product-wrapper">
+                      <!-- Product Image -->
+                      <div class="product-img">
+                        <img src="img/product-img/product-7.jpg" alt="" />
+                        <!-- Hover Thumb -->
+                        <img
+                          class="hover-img"
+                          src="img/product-img/product-8.jpg"
+                          alt=""
+                        />
+
+                        <!-- Product Badge -->
+                        <div class="product-badge new-badge">
+                          <span>New</span>
+                        </div>
+
+                        <!-- Favourite -->
+                        <div class="product-favourite">
+                          <a href="#" class="favme fa fa-heart"></a>
+                        </div>
+                      </div>
+
+                      <!-- Product Description -->
+                      <div class="product-description">
+                        <span>topshop</span>
+                        <a href="single-product-details.html">
+                          <h6>Knot Front Mini Dress</h6>
+                        </a>
+                        <p class="product-price">$80.00</p>
+
+                        <!-- Hover Content -->
+                        <div class="hover-content">
+                          <!-- Add to Cart -->
+                          <div class="add-to-cart-btn">
+                            <a href="#" class="btn essence-btn">Add to Cart</a>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+
+                  <!-- Single Product -->
+                  <div class="col-12 col-sm-6 col-lg-4">
+                    <div class="single-product-wrapper">
+                      <!-- Product Image -->
+                      <div class="product-img">
+                        <img src="img/product-img/product-8.jpg" alt="" />
+                        <!-- Hover Thumb -->
+                        <img
+                          class="hover-img"
+                          src="img/product-img/product-9.jpg"
+                          alt=""
+                        />
+
+                        <!-- Favourite -->
+                        <div class="product-favourite">
+                          <a href="#" class="favme fa fa-heart"></a>
+                        </div>
+                      </div>
+
+                      <!-- Product Description -->
+                      <div class="product-description">
+                        <span>topshop</span>
+                        <a href="single-product-details.html">
+                          <h6>Knot Front Mini Dress</h6>
+                        </a>
+                        <p class="product-price">$80.00</p>
+
+                        <!-- Hover Content -->
+                        <div class="hover-content">
+                          <!-- Add to Cart -->
+                          <div class="add-to-cart-btn">
+                            <a href="#" class="btn essence-btn">Add to Cart</a>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+
+                  <!-- Single Product -->
+                  <div class="col-12 col-sm-6 col-lg-4">
+                    <div class="single-product-wrapper">
+                      <!-- Product Image -->
+                      <div class="product-img">
+                        <img src="img/product-img/product-9.jpg" alt="" />
+                        <!-- Hover Thumb -->
+                        <img
+                          class="hover-img"
+                          src="img/product-img/product-1.jpg"
+                          alt=""
+                        />
+
+                        <!-- Favourite -->
+                        <div class="product-favourite">
+                          <a href="#" class="favme fa fa-heart"></a>
+                        </div>
+                      </div>
+
+                      <!-- Product Description -->
+                      <div class="product-description">
+                        <span>topshop</span>
+                        <a href="single-product-details.html">
+                          <h6>Knot Front Mini Dress</h6>
+                        </a>
+                        <p class="product-price">$80.00</p>
+
+                        <!-- Hover Content -->
+                        <div class="hover-content">
+                          <!-- Add to Cart -->
+                          <div class="add-to-cart-btn">
+                            <a href="#" class="btn essence-btn">Add to Cart</a>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
               </div>
-          
-              <div class="price-box">
-                <p class="price">$100.00</p>
-                <del>$120.00</del>
-              </div>
-          
+              <!-- Pagination -->
+              <nav aria-label="navigation">
+                <ul class="pagination mt-50 mb-70">
+                  <li class="page-item">
+                    <a class="page-link" href="#"
+                      ><i class="fa fa-angle-left"></i
+                    ></a>
+                  </li>
+                  <li class="page-item">
+                    <a class="page-link" href="#">1</a>
+                  </li>
+                  <li class="page-item">
+                    <a class="page-link" href="#">2</a>
+                  </li>
+                  <li class="page-item">
+                    <a class="page-link" href="#">3</a>
+                  </li>
+                  <li class="page-item">
+                    <a class="page-link" href="#">...</a>
+                  </li>
+                  <li class="page-item">
+                    <a class="page-link" href="#">21</a>
+                  </li>
+                  <li class="page-item">
+                    <a class="page-link" href="#"
+                      ><i class="fa fa-angle-right"></i
+                    ></a>
+                  </li>
+                </ul>
+              </nav>
             </div>
-          
-          </div>
-    
-          <div class="showcase">
-          
-            <div class="showcase-banner">
-              <img src="./assets/images/products/party-wear-1.jpg" alt="Womens Party Wear Shoes" class="product-img default"
-                width="300">
-              <img src="./assets/images/products/party-wear-2.jpg" alt="Womens Party Wear Shoes" class="product-img hover"
-                width="300">
-          
-              <p class="showcase-badge angle black">sale</p>
-          
-              <div class="showcase-actions">
-                <button class="btn-action">
-                  <ion-icon name="heart-outline"></ion-icon>
-                </button>
-          
-                <button class="btn-action">
-                  <ion-icon name="eye-outline"></ion-icon>
-                </button>
-          
-                <button class="btn-action">
-                  <ion-icon name="repeat-outline"></ion-icon>
-                </button>
-          
-                <button class="btn-action">
-                  <ion-icon name="bag-add-outline"></ion-icon>
-                </button>
-              </div>
-            </div>
-          
-            <div class="showcase-content">
-              <a href="#" class="showcase-category">party wear</a>
-          
-              <h3>
-                <a href="#" class="showcase-title">Womens Party Wear Shoes</a>
-              </h3>
-          
-              <div class="showcase-rating">
-                <ion-icon name="star"></ion-icon>
-                <ion-icon name="star"></ion-icon>
-                <ion-icon name="star"></ion-icon>
-                <ion-icon name="star-outline"></ion-icon>
-                <ion-icon name="star-outline"></ion-icon>
-              </div>
-          
-              <div class="price-box">
-                <p class="price">$25.00</p>
-                <del>$30.00</del>
-              </div>
-          
-            </div>
-          
-          </div>
-    
-          <div class="showcase">
-          
-            <div class="showcase-banner">
-              <img src="./assets/images/products/jacket-1.jpg" alt="Mens Winter Leathers Jackets" class="product-img default"
-                width="300">
-              <img src="./assets/images/products/jacket-2.jpg" alt="Mens Winter Leathers Jackets" class="product-img hover"
-                width="300">
-          
-              <div class="showcase-actions">
-                <button class="btn-action">
-                  <ion-icon name="heart-outline"></ion-icon>
-                </button>
-          
-                <button class="btn-action">
-                  <ion-icon name="eye-outline"></ion-icon>
-                </button>
-          
-                <button class="btn-action">
-                  <ion-icon name="repeat-outline"></ion-icon>
-                </button>
-          
-                <button class="btn-action">
-                  <ion-icon name="bag-add-outline"></ion-icon>
-                </button>
-              </div>
-            </div>
-          
-            <div class="showcase-content">
-              <a href="#" class="showcase-category">jacket</a>
-          
-              <h3>
-                <a href="#" class="showcase-title">Mens Winter Leathers Jackets</a>
-              </h3>
-          
-              <div class="showcase-rating">
-                <ion-icon name="star"></ion-icon>
-                <ion-icon name="star"></ion-icon>
-                <ion-icon name="star"></ion-icon>
-                <ion-icon name="star"></ion-icon>
-                <ion-icon name="star-outline"></ion-icon>
-              </div>
-          
-              <div class="price-box">
-                <p class="price">$32.00</p>
-                <del>$45.00</del>
-              </div>
-          
-            </div>
-          
-          </div>
-    
-          <div class="showcase">
-          
-            <div class="showcase-banner">
-              <img src="./assets/images/products/sports-2.jpg" alt="Trekking & Running Shoes - black" class="product-img default"
-                width="300">
-              <img src="./assets/images/products/sports-4.jpg" alt="Trekking & Running Shoes - black" class="product-img hover"
-                width="300">
-          
-              <p class="showcase-badge angle black">sale</p>
-          
-              <div class="showcase-actions">
-                <button class="btn-action">
-                  <ion-icon name="heart-outline"></ion-icon>
-                </button>
-          
-                <button class="btn-action">
-                  <ion-icon name="eye-outline"></ion-icon>
-                </button>
-          
-                <button class="btn-action">
-                  <ion-icon name="repeat-outline"></ion-icon>
-                </button>
-          
-                <button class="btn-action">
-                  <ion-icon name="bag-add-outline"></ion-icon>
-                </button>
-              </div>
-            </div>
-          
-            <div class="showcase-content">
-              <a href="#" class="showcase-category">sports</a>
-          
-              <h3>
-                <a href="#" class="showcase-title">Trekking & Running Shoes - black</a>
-              </h3>
-          
-              <div class="showcase-rating">
-                <ion-icon name="star"></ion-icon>
-                <ion-icon name="star"></ion-icon>
-                <ion-icon name="star"></ion-icon>
-                <ion-icon name="star-outline"></ion-icon>
-                <ion-icon name="star-outline"></ion-icon>
-              </div>
-          
-              <div class="price-box">
-                <p class="price">$58.00</p>
-                <del>$64.00</del>
-              </div>
-          
-            </div>
-          
-          </div>
-    
-          <div class="showcase">
-          
-            <div class="showcase-banner">
-              <img src="./assets/images/products/shoe-1.jpg" alt="Men's Leather Formal Wear shoes" class="product-img default"
-                width="300">
-              <img src="./assets/images/products/shoe-1_1.jpg" alt="Men's Leather Formal Wear shoes" class="product-img hover"
-                width="300">
-          
-              <div class="showcase-actions">
-                <button class="btn-action">
-                  <ion-icon name="heart-outline"></ion-icon>
-                </button>
-          
-                <button class="btn-action">
-                  <ion-icon name="eye-outline"></ion-icon>
-                </button>
-          
-                <button class="btn-action">
-                  <ion-icon name="repeat-outline"></ion-icon>
-                </button>
-          
-                <button class="btn-action">
-                  <ion-icon name="bag-add-outline"></ion-icon>
-                </button>
-              </div>
-            </div>
-          
-            <div class="showcase-content">
-              <a href="#" class="showcase-category">formal</a>
-          
-              <h3>
-                <a href="#" class="showcase-title">Men's Leather Formal Wear shoes</a>
-              </h3>
-          
-              <div class="showcase-rating">
-                <ion-icon name="star"></ion-icon>
-                <ion-icon name="star"></ion-icon>
-                <ion-icon name="star"></ion-icon>
-                <ion-icon name="star"></ion-icon>
-                <ion-icon name="star-outline"></ion-icon>
-              </div>
-          
-              <div class="price-box">
-                <p class="price">$50.00</p>
-                <del>$65.00</del>
-              </div>
-          
-            </div>
-          
-          </div>
-    
-          <div class="showcase">
-          
-            <div class="showcase-banner">
-              <img src="./assets/images/products/shorts-1.jpg" alt="Better Basics French Terry Sweatshorts"
-                class="product-img default" width="300">
-              <img src="./assets/images/products/shorts-2.jpg" alt="Better Basics French Terry Sweatshorts"
-                class="product-img hover" width="300">
-          
-              <p class="showcase-badge angle black">sale</p>
-          
-              <div class="showcase-actions">
-                <button class="btn-action">
-                  <ion-icon name="heart-outline"></ion-icon>
-                </button>
-          
-                <button class="btn-action">
-                  <ion-icon name="eye-outline"></ion-icon>
-                </button>
-          
-                <button class="btn-action">
-                  <ion-icon name="repeat-outline"></ion-icon>
-                </button>
-          
-                <button class="btn-action">
-                  <ion-icon name="bag-add-outline"></ion-icon>
-                </button>
-              </div>
-            </div>
-          
-            <div class="showcase-content">
-              <a href="#" class="showcase-category">shorts</a>
-          
-              <h3>
-                <a href="#" class="showcase-title">Better Basics French Terry Sweatshorts</a>
-              </h3>
-          
-              <div class="showcase-rating">
-                <ion-icon name="star"></ion-icon>
-                <ion-icon name="star"></ion-icon>
-                <ion-icon name="star"></ion-icon>
-                <ion-icon name="star-outline"></ion-icon>
-                <ion-icon name="star-outline"></ion-icon>
-              </div>
-          
-              <div class="price-box">
-                <p class="price">$78.00</p>
-                <del>$85.00</del>
-              </div>      
-            </div>      
           </div>
         </div>
-      </div>
-</body>
+      </section>
+      <!-- ##### Shop Grid Area End ##### -->
+    </main>
+  </body>
 </html>
