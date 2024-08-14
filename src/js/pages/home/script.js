@@ -49,7 +49,6 @@ document.addEventListener('DOMContentLoaded', function() {
         updateTestimonials();
     });
 
-    // Ajusta o tamanho do container para acomodar todos os itens
     function adjustContainerWidth() {
         const containerWidth = totalItems * 100 / itemsPerPage;
         testimonialsContent.style.width = `${containerWidth}%`;
@@ -59,4 +58,17 @@ document.addEventListener('DOMContentLoaded', function() {
 });
 
 
+/*-----------View All Button------*/
 
+document.addEventListener('DOMContentLoaded', function() {
+    const viewAllButtons = document.querySelectorAll('.view-all');
+  
+    viewAllButtons.forEach(button => {
+      button.addEventListener('click', function() {
+        const newArrivalsSection = this.closest('.new-arrivals');
+        
+        newArrivalsSection.classList.toggle('expanded');
+      });
+    });
+  });
+  

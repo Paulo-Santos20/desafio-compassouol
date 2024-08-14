@@ -8,6 +8,7 @@
     font-family: "Integral CF";
     src: url("/src/assets/fonts/Integralcf-regular.otf") format("truetype");
   }
+
   :root {
     --primary-color: #000000;
     --search-color: #f0f0f0;
@@ -25,6 +26,5 @@
     padding: 0;
     box-sizing: border-box;
     text-decoration: none;
-    transition: 0.2s linear;
   }
   
