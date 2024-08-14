@@ -160,10 +160,9 @@
     .banner-image img {
       width: 100%;
       height: 100%;
-    }
-    .banner-image img {
       max-width: 100%;
     }
+    
     .banner-image svg:first-child {
       left: 10%;
       top: 35%;
@@ -171,6 +170,23 @@
     .banner-image svg:last-child {
       right: 5%;
       top: 10%;
+    }
+  }
+  
+  @media (max-width:1240px){
+    .banner-image img {
+      height: 100%;
+      object-fit: cover;
+    }
+    .banner-image svg:first-child {
+      top: 30%;
+      width: 5%;
+      height: 10%;
+    }
+    .banner-image svg:last-child {
+      top: 10%;
+      width: 10%;
+      height: 10%;
     }
   }
   
@@ -273,11 +289,11 @@
     }
     .banner-image svg:first-child {
       left: 10%;
-      top: 10%;
+      top: 25%;
     }
     .banner-image svg:last-child {
       right: 5%;
-      top: -2%;
+      top: 0%;
     }
   }
   
