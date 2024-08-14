@@ -149,7 +149,7 @@ footer {
   
   #footer_social_media {
     display: flex;
-    gap: 2rem;
+    gap: 1rem;
     margin-top: 1.5rem;
   }
   
@@ -157,7 +157,7 @@ footer {
     height: 28px;
     width: 28px;
     border-radius: 50%;
-    gap: 26px;
+    gap: 15px;
   }
   
   #footer_social_media .footer-link i {
