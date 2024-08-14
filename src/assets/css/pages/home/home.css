@@ -339,10 +339,11 @@
   .new-arrivals h2 {
     font-family: "Integral CF";
     font-weight: 700;
-    line-height: 1.2; /* Ajuste de acordo com o tamanho da fonte */
+    line-height: 1.2; 
     text-align: center;
     margin: 50px 0;
-    font-size: calc(24px + 2vw); /* O tamanho da fonte será ajustado de acordo com a largura da viewport */
+    font-size: calc(24px + 2vw); 
+    color: black;
   }
   
   .new-arrivals button {
