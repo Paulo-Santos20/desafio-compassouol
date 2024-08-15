@@ -153,11 +153,11 @@
   .search-bar button {
     position: absolute;
     margin-left: 10px;
-    font-size: 20px;
     border: none;
+    font-size: 40px;
     cursor: pointer;
-    color: black;
     background-color: transparent;
+    display: block;
   }
   
   .fa-magnifying-glass {
