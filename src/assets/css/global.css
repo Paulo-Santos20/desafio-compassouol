@@ -26,3 +26,15 @@
   box-sizing: border-box;
   text-decoration: none;
 }
+
+@font-face {
+  font-family: 'Satoshi';
+  src: url('/fonts/Satoshi-Regular.ttf') format('truetype');
+  font-display: swap; 
+}
+
+@font-face {
+  font-family: 'Integral CF';
+  src: url('/fonts/Integralcf-regular.otf') format('opentype');
+  font-display: swap;
+}
