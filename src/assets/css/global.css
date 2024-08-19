@@ -29,12 +29,12 @@
 
 @font-face {
   font-family: 'Satoshi';
-  src: url('/fonts/Satoshi-Regular.ttf') format('truetype');
+  src: url('/src/assets/fonts/Satoshi-Regular.ttf') format('truetype');
   font-display: swap; 
 }
 
 @font-face {
   font-family: 'Integral CF';
-  src: url('/fonts/Integralcf-regular.otf') format('opentype');
+  src: url('/src/assets/fonts/Integralcf-regular.otf') format('opentype');
   font-display: swap;
 }
