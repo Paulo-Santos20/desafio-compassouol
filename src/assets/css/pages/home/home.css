@@ -164,8 +164,8 @@
 
 @media (max-width: 1440px) {
   .banner-image img {
-    width: 100%;
-    height: 100%;
+    width: 390px;
+    height: 448px;
     max-width: 100%;
   }
 
