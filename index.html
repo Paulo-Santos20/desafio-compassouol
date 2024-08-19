@@ -10,7 +10,9 @@
     <link rel="stylesheet" href="/src/assets/css/menu.css" />
     <link rel="stylesheet" href="/src/assets/css/footer.css" />
 
-    <script src="/src/js/pages/home/script.js" defer></script>
+    <script src="/src/js/pages/home/button-all.js" defer></script>
+    <script src="/src/js/pages/home/button-promo.js" defer></script>
+    <script src="/src/js/pages/home/slider.js" defer></script>
   </head>
   <body>
     <div class="promo">
@@ -21,7 +23,10 @@
 
     <header>
       <input type="checkbox" name="menu-toggler" id="toggler" />
-      <label for="toggler" class="fa-solid fa-bars"></label>
+      <label for="toggler" class="bars"><svg width="20" height="16" viewBox="0 0 20 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path d="M19.375 8C19.375 8.29837 19.2565 8.58452 19.0455 8.79549C18.8345 9.00647 18.5484 9.125 18.25 9.125H1.75C1.45163 9.125 1.16548 9.00647 0.954505 8.79549C0.743526 8.58452 0.625 8.29837 0.625 8C0.625 7.70163 0.743526 7.41548 0.954505 7.2045C1.16548 6.99353 1.45163 6.875 1.75 6.875H18.25C18.5484 6.875 18.8345 6.99353 19.0455 7.2045C19.2565 7.41548 19.375 7.70163 19.375 8ZM1.75 3.125H18.25C18.5484 3.125 18.8345 3.00647 19.0455 2.7955C19.2565 2.58452 19.375 2.29837 19.375 2C19.375 1.70163 19.2565 1.41548 19.0455 1.2045C18.8345 0.993526 18.5484 0.875 18.25 0.875H1.75C1.45163 0.875 1.16548 0.993526 0.954505 1.2045C0.743526 1.41548 0.625 1.70163 0.625 2C0.625 2.29837 0.743526 2.58452 0.954505 2.7955C1.16548 3.00647 1.45163 3.125 1.75 3.125ZM18.25 12.875H1.75C1.45163 12.875 1.16548 12.9935 0.954505 13.2045C0.743526 13.4155 0.625 13.7016 0.625 14C0.625 14.2984 0.743526 14.5845 0.954505 14.7955C1.16548 15.0065 1.45163 15.125 1.75 15.125H18.25C18.5484 15.125 18.8345 15.0065 19.0455 14.7955C19.2565 14.5845 19.375 14.2984 19.375 14C19.375 13.7016 19.2565 13.4155 19.0455 13.2045C18.8345 12.9935 18.5484 12.875 18.25 12.875Z" fill="black"/>
+        </svg>
+        </label>
       <a href="index.html" aria-label="Logo"><p>SHOP.CO</p></a>
 
       <nav class="navbar">
@@ -67,10 +72,19 @@
 
       <div class="search-bar">
         <button type="submit" aria-label="Submit search button">
-          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-            <path d="M21.7959 20.2041L17.3437 15.75C18.6787 14.0104 19.3019 11.8282 19.087 9.64607C18.8722 7.4639 17.8353 5.44516 16.1867 3.99937C14.5382 2.55357 12.4014 1.78899 10.2098 1.86071C8.01829 1.93244 5.93607 2.8351 4.38558 4.38559C2.83509 5.93608 1.93243 8.0183 1.8607 10.2098C1.78898 12.4014 2.55356 14.5382 3.99936 16.1867C5.44515 17.8353 7.46389 18.8722 9.64606 19.087C11.8282 19.3019 14.0104 18.6787 15.75 17.3438L20.2059 21.8006C20.3106 21.9053 20.4348 21.9883 20.5715 22.0449C20.7083 22.1016 20.8548 22.1307 21.0028 22.1307C21.1508 22.1307 21.2973 22.1016 21.4341 22.0449C21.5708 21.9883 21.695 21.9053 21.7997 21.8006C21.9043 21.696 21.9873 21.5717 22.044 21.435C22.1006 21.2983 22.1298 21.1517 22.1298 21.0037C22.1298 20.8558 22.1006 20.7092 22.044 20.5725C21.9873 20.4358 21.9043 20.3115 21.7997 20.2069L21.7959 20.2041ZM4.12499 10.5C4.12499 9.23915 4.49888 8.0066 5.19938 6.95824C5.89987 5.90988 6.89551 5.09278 8.06039 4.61027C9.22527 4.12776 10.5071 4.00151 11.7437 4.2475C12.9803 4.49348 14.1162 5.10064 15.0078 5.9922C15.8994 6.88376 16.5065 8.01967 16.7525 9.2563C16.9985 10.4929 16.8722 11.7747 16.3897 12.9396C15.9072 14.1045 15.0901 15.1001 14.0418 15.8006C12.9934 16.5011 11.7608 16.875 10.5 16.875C8.80977 16.8733 7.18927 16.2011 5.99411 15.0059C4.79894 13.8107 4.12673 12.1902 4.12499 10.5Z" fill="black" fill-opacity="0.4"/>
-            </svg>
-            
+          <svg
+            width="24"
+            height="24"
+            viewBox="0 0 24 24"
+            fill="none"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              d="M21.7959 20.2041L17.3437 15.75C18.6787 14.0104 19.3019 11.8282 19.087 9.64607C18.8722 7.4639 17.8353 5.44516 16.1867 3.99937C14.5382 2.55357 12.4014 1.78899 10.2098 1.86071C8.01829 1.93244 5.93607 2.8351 4.38558 4.38559C2.83509 5.93608 1.93243 8.0183 1.8607 10.2098C1.78898 12.4014 2.55356 14.5382 3.99936 16.1867C5.44515 17.8353 7.46389 18.8722 9.64606 19.087C11.8282 19.3019 14.0104 18.6787 15.75 17.3438L20.2059 21.8006C20.3106 21.9053 20.4348 21.9883 20.5715 22.0449C20.7083 22.1016 20.8548 22.1307 21.0028 22.1307C21.1508 22.1307 21.2973 22.1016 21.4341 22.0449C21.5708 21.9883 21.695 21.9053 21.7997 21.8006C21.9043 21.696 21.9873 21.5717 22.044 21.435C22.1006 21.2983 22.1298 21.1517 22.1298 21.0037C22.1298 20.8558 22.1006 20.7092 22.044 20.5725C21.9873 20.4358 21.9043 20.3115 21.7997 20.2069L21.7959 20.2041ZM4.12499 10.5C4.12499 9.23915 4.49888 8.0066 5.19938 6.95824C5.89987 5.90988 6.89551 5.09278 8.06039 4.61027C9.22527 4.12776 10.5071 4.00151 11.7437 4.2475C12.9803 4.49348 14.1162 5.10064 15.0078 5.9922C15.8994 6.88376 16.5065 8.01967 16.7525 9.2563C16.9985 10.4929 16.8722 11.7747 16.3897 12.9396C15.9072 14.1045 15.0901 15.1001 14.0418 15.8006C12.9934 16.5011 11.7608 16.875 10.5 16.875C8.80977 16.8733 7.18927 16.2011 5.99411 15.0059C4.79894 13.8107 4.12673 12.1902 4.12499 10.5Z"
+              fill="black"
+              fill-opacity="0.4"
+            />
+          </svg>
         </button>
         <input
           type="text"
@@ -155,8 +169,8 @@
             <img
               src="/src/assets/images/trendy-fashionable-couple-posing.webp"
               aria-label="Fashionable Couple"
-              width="auto"
-              height="auto"
+              width="995px"
+              height="663px"
             />
             <svg
               width="104"
@@ -300,7 +314,9 @@
         <div class="products">
           <div class="product">
             <div class="image-container">
-              <img src="/src/assets/images/image.webp" aria-label="Product 1" />
+              <img src="/src/assets/images/image.webp" aria-label="Product 1" 
+              width="296"
+              height="444"/>              
             </div>
             <h3>T-shrit with Tape Details</h3>
             <div class="rating" data-rating="4.5">
@@ -317,7 +333,9 @@
           </div>
           <div class="product">
             <div class="image-container">
-              <img src="/src/assets/images/jeans.webp" aria-label="Product 2" />
+              <img src="/src/assets/images/jeans.webp" aria-label="Product 2" 
+              width="296"
+              height="444"/>
             </div>
             <h3>Skinny Fit Jeans</h3>
             <div class="rating" data-rating="4.7">
@@ -339,6 +357,10 @@
               <img
                 src="/src/assets/images/long sleeve.webp"
                 aria-label="Product 3"
+                width="296"
+                height="444"
+                width="296"
+                height="444"
               />
             </div>
             <h3>Checkered Shirt</h3>
@@ -359,6 +381,9 @@
               <img
                 src="/src/assets/images/t-shirt.webp"
                 aria-label="Product 4"
+                width="296"
+                height="444"
+                loading="lazy"
               />
             </div>
 
@@ -383,7 +408,11 @@
         <div class="more-products">
           <div class="product">
             <div class="image-container">
-              <img src="/src/assets/images/image.webp" aria-label="Product 1" />
+              <img src="/src/assets/images/image.webp" aria-label="Product 1" 
+              width="296"
+                height="444"
+                loading="lazy"
+                />
             </div>
             <h3>T-shrit with Tape Details</h3>
             <div class="rating" data-rating="4.5">
@@ -400,7 +429,11 @@
           </div>
           <div class="product">
             <div class="image-container">
-              <img src="/src/assets/images/image.webp" aria-label="Product 1" />
+              <img src="/src/assets/images/image.webp" aria-label="Product 1" 
+              width="296"
+                height="444"
+                loading="lazy"
+                />
             </div>
             <h3>T-shrit with Tape Details</h3>
             <div class="rating" data-rating="4.5">
@@ -417,7 +450,11 @@
           </div>
           <div class="product">
             <div class="image-container">
-              <img src="/src/assets/images/image.webp" aria-label="Product 1" />
+              <img src="/src/assets/images/image.webp" aria-label="Product 1" 
+              width="296"
+                height="444"
+                loading="lazy"
+                />
             </div>
             <h3>T-shrit with Tape Details</h3>
             <div class="rating" data-rating="4.5">
@@ -434,7 +471,11 @@
           </div>
           <div class="product">
             <div class="image-container">
-              <img src="/src/assets/images/image.webp" aria-label="Product 1" />
+              <img src="/src/assets/images/image.webp" aria-label="Product 1"
+              width="296"
+              height="444"
+              loading="lazy"
+              />
             </div>
             <h3>T-shrit with Tape Details</h3>
             <div class="rating" data-rating="4.5">
@@ -486,6 +527,8 @@
               <img
                 src="/src/assets/images/t-shirt2.webp"
                 aria-label="Product 2"
+                width="296"
+                height="444"
               />
             </div>
 
@@ -506,6 +549,8 @@
               <img
                 src="/src/assets/images/shorts2.webp"
                 aria-label="Product 3"
+                width="296"
+                height="444"
               />
             </div>
 
@@ -525,6 +570,8 @@
               <img
                 src="/src/assets/images/jeans2.webp"
                 aria-label="Product 4"
+                width="296"
+                height="444"
               />
             </div>
 
@@ -546,7 +593,10 @@
         <div class="more-products">
           <div class="product">
             <div class="image-container">
-              <img src="/src/assets/images/image.webp" aria-label="Product 1" />
+              <img src="/src/assets/images/image.webp" aria-label="Product 1"
+              width="296"
+              height="444"
+              loading="lazy" />
             </div>
             <h3>T-shrit with Tape Details</h3>
             <div class="rating" data-rating="4.5">
@@ -563,7 +613,10 @@
           </div>
           <div class="product">
             <div class="image-container">
-              <img src="/src/assets/images/image.webp" aria-label="Product 1" />
+              <img src="/src/assets/images/image.webp" aria-label="Product 1"
+              width="296"
+              height="444"
+              loading="lazy" />
             </div>
             <h3>T-shrit with Tape Details</h3>
             <div class="rating" data-rating="4.5">
@@ -580,7 +633,10 @@
           </div>
           <div class="product">
             <div class="image-container">
-              <img src="/src/assets/images/image.webp" aria-label="Product 1" />
+              <img src="/src/assets/images/image.webp" aria-label="Product 1" 
+              width="296"
+              height="444"
+              loading="lazy"/>
             </div>
             <h3>T-shrit with Tape Details</h3>
             <div class="rating" data-rating="4.5">
@@ -597,7 +653,10 @@
           </div>
           <div class="product">
             <div class="image-container">
-              <img src="/src/assets/images/image.webp" aria-label="Product 1" />
+              <img src="/src/assets/images/image.webp" aria-label="Product 1" 
+              width="296"
+              height="444"
+              loading="lazy"/>
             </div>
             <h3>T-shrit with Tape Details</h3>
             <div class="rating" data-rating="4.5">

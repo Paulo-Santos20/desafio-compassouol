@@ -1,18 +1,3 @@
-/*-----------Button promo-------*/
-document.addEventListener('DOMContentLoaded', () => {
-    const closeButton = document.querySelector('.close-btn');
-    const promo = document.querySelector('.promo');
-
-    if (closeButton && promo) {
-        closeButton.addEventListener('click', () => {
-            promo.style.display = 'none';
-        });
-    }
-});
-
-
-/*-----------Slider------*/
-
 document.addEventListener('DOMContentLoaded', function() {
     const prevButton = document.querySelector('.nav-link.prev');
     const nextButton = document.querySelector('.nav-link.next');
@@ -70,20 +55,3 @@ document.addEventListener('DOMContentLoaded', function() {
     adjustContainerWidth();
     toggleBlurEffect(); 
 });
-
-
-
-/*-----------View All Button------*/
-
-document.addEventListener('DOMContentLoaded', function() {
-    const viewAllButtons = document.querySelectorAll('.view-all');
-  
-    viewAllButtons.forEach(button => {
-      button.addEventListener('click', function() {
-        const newArrivalsSection = this.closest('.new-arrivals');
-        
-        newArrivalsSection.classList.toggle('expanded');
-      });
-    });
-  });
-  
