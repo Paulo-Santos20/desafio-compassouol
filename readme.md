@@ -5,9 +5,6 @@ Foi de grande valor ter essa experiência, desafios é desenvolver page de login
 
 📺 Preview
 
-⚙️ Funcionalidades
- Autenticação na plataforma preenchendo com seus dados no formulário:
-
 ![Smartphone image](./public/Samsung-Galaxy-S20-desafio-compassouol.vercel.app.png)
 ![iPad image](./public/iPad-Mini-desafio-compassouol.vercel.app.png)
 ![Macbook image](./public/Macbook-Air-1559x975.png)
