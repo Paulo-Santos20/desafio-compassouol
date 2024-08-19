@@ -1,11 +1,13 @@
 @font-face {
-  font-family: "Satoshi";
-  src: url("/src/assets/fonts/Satoshi-Regular.ttf") format("truetype");
+  font-family: 'Satoshi';
+  src: url('/src/assets/fonts/Satoshi-Regular.ttf');
+  font-display: swap;
 }
 
 @font-face {
-  font-family: "Integral CF";
-  src: url("/src/assets/fonts/Integralcf-regular.otf") format("truetype");
+  font-family: 'Integral CF';
+  src: url('/src/assets/fonts/Integralcf-regular.otf');
+  font-display: swap;
 }
 
 :root {
@@ -25,16 +27,4 @@
   padding: 0;
   box-sizing: border-box;
   text-decoration: none;
-}
-
-@font-face {
-  font-family: 'Satoshi';
-  src: url('/src/assets/fonts/Satoshi-Regular.ttf') format('truetype');
-  font-display: swap; 
-}
-
-@font-face {
-  font-family: 'Integral CF';
-  src: url('/src/assets/fonts/Integralcf-regular.otf') format('opentype');
-  font-display: swap;
 }
